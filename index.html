@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Multi-step form</title>
+</head>
+
+<body>
+    <div class="card official">
+        <div class="dash">
+            <ul>
+                <li>
+                    <div class="num active">1</div>
+                    <div class="info">
+                        <h3>STEP 1</h3>
+                        <p>YOUR INFO</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">2</div>
+                    <div class="info">
+                        <h3>STEP 2</h3>
+                        <p>SELECT PLAN</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">3</div>
+                    <div class="info">
+                        <h3>STEP 3</h3>
+                        <p>ADD-ONS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">4</div>
+                    <div class="info">
+                        <h3>STEP 4</h3>
+                        <p>SUMMARY</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="content">
+            <div class="heading">
+                <h1>Personal info</h1>
+                <p>Please provide your name, email address and phone number</p>
+            </div>
+            <form action="">
+                <label for="name"><span>Name</span></label>
+                <input id="name" type="text" placeholder="e.g. Stephen King">
+                <label for="email"><span>Email Address</span><span class="msgs">This Field Is Requird</span></label>
+                <input id="email" type="email" placeholder="e.g. stephenking@lorem.com
+            ">
+                <label for="phone"><span>Phone Number</span><span class="msgs">This Field Is Requird</span></label>
+                <input id="phone" type="tel" placeholder="e.g. 123-456-7890">
+            </form>
+            <button class="nextBtn" id="nextBtn1">Next Step</button>
+        </div>
+    </div>
+    <div class="card primary closed">
+        <div class="dash">
+            <ul>
+                <li>
+                    <div class="num">1</div>
+                    <div class="info">
+                        <h3>STEP 1</h3>
+                        <p>YOUR INFO</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num active">2</div>
+                    <div class="info">
+                        <h3>STEP 2</h3>
+                        <p>SELECT PLAN</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">3</div>
+                    <div class="info">
+                        <h3>STEP 3</h3>
+                        <p>ADD-ONS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">4</div>
+                    <div class="info">
+                        <h3>STEP 4</h3>
+                        <p>SUMMARY</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="heading">
+                <h1>Select Your Plan</h1>
+                <p>You have the option of monthly or yearly billing</p>
+            </div>
+            <div class="cate">
+                <ul class="cards active">
+                    <li onclick="getPlanPrice('Arcade',9)" class="">
+                        <img src="./assets/images/icon-arcade.svg" alt="" />
+                        <h3>Arcade</h3>
+                        <p>$9/mo</p>
+                    </li>
+                    <li onclick="getPlanPrice('Advanced',12)" class="">
+                        <img src="./assets/images/icon-advanced.svg" alt="" />
+                        <h3>Advanced</h3>
+                        <p>$12/mo</p>
+                    </li>
+                    <li onclick="getPlanPrice('Pro',15)" class="">
+                        <img src="./assets/images/icon-pro.svg" alt="" />
+                        <h3>Pro</h3>
+                        <p>$15/mo</p>
+                    </li>
+                </ul>
+                <ul class="cards">
+                    <li onclick="getPlanPrice('Arcade',90)" class="">
+                        <img src="./assets/images/icon-arcade.svg" alt="" />
+                        <h3>Arcade</h3>
+                        <p>$90/yr</p>
+                        <span>2 Months Free</span>
+                    </li>
+                    <li onclick="getPlanPrice('Advanced',120)" class="">
+                        <img src="./assets/images/icon-advanced.svg" alt="" />
+                        <h3>Advanced</h3>
+                        <p>$120/yr</p>
+                        <span>2 Months Free</span>
+                    </li>
+                    <li onclick="getPlanPrice('Pro',150)" class="">
+                        <img src="./assets/images/icon-pro.svg" alt="" />
+                        <h3>Pro</h3>
+                        <p>$150/yr</p>
+                        <span>2 Months Free</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="choose">
+                <span class="active">Monthly</span>
+                <button class="choosePlan">
+                    <div class="ball"></div>
+                </button>
+                <span class="">yearly</span>
+            </div>
+            <button class="nextBtn" id="nextBtn2">Next Step</button>
+            <button class="goBack" id="goBack2">Go Back</button>
+        </div>
+    </div>
+    <div class="card card1 closed">
+        <div class="dash">
+            <ul>
+                <li>
+                    <div class="num">1</div>
+                    <div class="info">
+                        <h3>STEP 1</h3>
+                        <p>YOUR INFO</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">2</div>
+                    <div class="info">
+                        <h3>STEP 2</h3>
+                        <p>SELECT PLAN</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num active">3</div>
+                    <div class="info">
+                        <h3>STEP 3</h3>
+                        <p>ADD-ONS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">4</div>
+                    <div class="info">
+                        <h3>STEP 4</h3>
+                        <p>SUMMARY</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="content">
+            <div class="heading">
+                <h1>Pick add-ons</h1>
+                <p>Add-ons help enhance your gaming experience</p>
+            </div>
+            <ul class="ons">
+                <li>
+                    <input onclick="getAddOnsPrice(this,'Online Service',2)" class="addOns" type="checkbox">
+                    <div class="details">
+                        <h5>Online Service</h5>
+                        <p>Access to multiplayer games</p>
+                    </div>
+                    <span>+$2/mo</span>
+                </li>
+                <li>
+                    <input onclick="getAddOnsPrice(this,'Larger Storage',2)" class="addOns" type="checkbox">
+                    <div class="details">
+                        <h5>Larger Storage</h5>
+                        <p>Extra 1TB of cloud save</p>
+                    </div>
+                    <span>+$2/mo</span>
+                </li>
+                <li>
+                    <input onclick="getAddOnsPrice(this,'Customizable Profile',2)" class="addOns" type="checkbox">
+                    <div class="details">
+                        <h5>Customizable Profile</h5>
+                        <p>Custome theme on your profile</p>
+                    </div>
+                    <span>+$2/mo</span>
+                </li>
+            </ul>
+            <button class="nextBtn calculate" id="nextBtn3">Next Step</button>
+            <button class="goBack" id="goBack3">Go Back</button>
+        </div>
+    </div>
+    <div class="card card2 closed">
+        <div class="dash">
+            <ul>
+                <li>
+                    <div class="num">1</div>
+                    <div class="info">
+                        <h3>STEP 1</h3>
+                        <p>YOUR INFO</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">2</div>
+                    <div class="info">
+                        <h3>STEP 2</h3>
+                        <p>SELECT PLAN</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num">3</div>
+                    <div class="info">
+                        <h3>STEP 3</h3>
+                        <p>ADD-ONS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num active">4</div>
+                    <div class="info">
+                        <h3>STEP 4</h3>
+                        <p>SUMMARY</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="heading">
+                <h1>Finishing Up</h1>
+                <p>Double-Check everything looks OK before confirming</p>
+            </div>
+            <!-- 
+              
+           -->
+            <ul class="results">
+                <li>
+                    <div class="finalTitle"></div>
+                    <div class="total"></div>
+                </li>
+                <li class="services">
+
+                </li>
+                <li>
+                    <div class="title">Total ( Per <span class="month">Month</span><span class="year closed">Year</span>
+                        )</div>
+                    <div class="totalPlan"></div>
+                </li>
+            </ul>
+            <button class="nextBtn confirm" id="nextBtn4">Confirm</button>
+            <button class="goBack goBack4" id="goBack3">Go Back</button>
+        </div>
+    </div>
+    <div class="card closed msgConfirm">
+        <div class="dash">
+            <ul>
+                <li>
+                    <div class="num active">1</div>
+                    <div class="info">
+                        <h3>STEP 1</h3>
+                        <p>YOUR INFO</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num active">2</div>
+                    <div class="info">
+                        <h3>STEP 2</h3>
+                        <p>SELECT PLAN</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num active">3</div>
+                    <div class="info">
+                        <h3>STEP 3</h3>
+                        <p>ADD-ONS</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="num active">4</div>
+                    <div class="info">
+                        <h3>STEP 4</h3>
+                        <p>SUMMARY</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="heading">
+                <h1>Thank You!</h1>
+                <p>For Confirming Your Subscription!</p>
+            </div>
+            <img src="./assets/images/icon-thank-you.svg" alt="" class="done">
+            <div class="msg">We hope you have fun using our platform. If you ever need support, Please feel free to
+                email us at <span>support@loremgaming.com</span></div>
+        </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://github.com/Mhmd12z">Mohammad Zeidan</a>.
+        </div>
+    </div>
+
+    <script src="master.js"></script>
+</body>
+
+</html>
